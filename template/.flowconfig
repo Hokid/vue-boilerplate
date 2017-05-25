@@ -1,0 +1,8 @@
+[ignore]
+.*/node_modules/*.
+.*/build/*.
+.*/config/*.
+.*/static/*.
+
+[options]
+module.name_mapper='^@/\(.*\)$' -> '<PROJECT_ROOT>/src/\1'

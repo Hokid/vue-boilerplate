@@ -70,6 +70,15 @@ module.exports = {
         }
       ]
     },
+    "flow": {
+      "type": "confirm",
+      "message": "Use Flow?"
+    },
+    "flow-eslint": {
+      "when": "flow",
+      "type": "confirm",
+      "message": "Use Flow plugin with ESLint?"
+    },
     "unit": {
       "type": "confirm",
       "message": "Setup unit tests with Karma + Mocha?"
@@ -82,6 +91,7 @@ module.exports = {
   "filters": {
     ".eslintrc.js": "lint",
     ".eslintignore": "lint",
+    ".flowconfig": "flow",
     "config/test.env.js": "unit || e2e",
     "test/unit/**/*": "unit",
     "build/webpack.test.conf.js": "unit",

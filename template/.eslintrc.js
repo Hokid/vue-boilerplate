@@ -19,6 +19,9 @@ module.exports = {
   // required to lint *.vue files
   plugins: [
     'html'
+    {{#flow-eslint}}
+    ,'flowtype-errors'
+    {{/flow-eslint}}
   ],
   {{#if_eq lintConfig "airbnb"}}
   // check if imports actually resolve
@@ -49,6 +52,9 @@ module.exports = {
       'optionalDependencies': ['test/unit/index.js']
     }],
     {{/if_eq}}
+    {{#flow-eslint}}
+    ,'flowtype-errors/show-errors' : 2
+    {{/flow-eslint}}
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
   }
