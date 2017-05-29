@@ -18,9 +18,8 @@ module.exports = {
   {{/if_eq}}
   // required to lint *.vue files
   plugins: [
-    'html'
-    {{#flow-eslint}}
-    ,'flowtype-errors'
+    'html'{{#flow-eslint}},
+    'flowtype-errors'
     {{/flow-eslint}}
   ],
   {{#if_eq lintConfig "airbnb"}}
@@ -53,7 +52,7 @@ module.exports = {
     }],
     {{/if_eq}}
     {{#flow-eslint}}
-    ,'flowtype-errors/show-errors' : 2
+    'flowtype-errors/show-errors' : 2,
     {{/flow-eslint}}
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
